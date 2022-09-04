@@ -13,16 +13,9 @@ class ToolController extends Controller
 	    return $tool;
 	}
 
-	public function activate(Tool $tool)
+	public function changeStatus(Tool $tool, ToolStatus $status)
 	{
-		$tool->status = ToolStatus::Active;
-		$tool->save();
-		return redirect()->route('tool', $tool->id);
-	}
-
-	public function deactivate(Tool $tool)
-	{
-		$tool->status = ToolStatus::Inactive;
+		$tool->status = $status;
 		$tool->save();
 		return redirect()->route('tool', $tool->id);
 	}

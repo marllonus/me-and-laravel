@@ -21,6 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('tool')->group(function() {
     Route::get('/{tool}', [ToolController::class, 'index'])->name('tool');
-    Route::get('/{tool}/activate', [ToolController::class, 'activate']);
-    Route::get('/{tool}/deactivate', [ToolController::class, 'deactivate']);
+    Route::get('/{tool}/change_status/{status}', [ToolController::class, 'changeStatus']);
 });
