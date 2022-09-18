@@ -31,4 +31,5 @@ Route::prefix('tool')
 Route::controller(StepladderController::class)->group(function() {
 	Route::get('/stepladder/{stepladder}/step/{step}', 'stepOnStepladder')
 		->scopeBindings();
+	Route::get('/stepladder', 'index');
 });
