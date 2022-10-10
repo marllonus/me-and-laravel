@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    Hello world
-
+    
+    {{ $slot  }}
     @livewireScripts
 
 </body>

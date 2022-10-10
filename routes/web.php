@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CollectionController;
+use App\Http\Livewire\CollectionSets;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +18,4 @@ use App\Http\Controllers\CollectionController;
     return view('welcome');
 });*/
 
-Route::get('/', [CollectionController::class, 'index']);
+Route::get('/', CollectionSets::class);
