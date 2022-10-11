@@ -6,7 +6,10 @@ npm-i:
 
 .PHONY: artisan
 artisan:
-	docker-compose exec php-fpm php ./laravel/artisan $(args)
+	docker-compose exec php-fpm php ./laravel/artisan $(_)
 
 composer:
-	docker-compose exec php-fpm composer $(args) --working-dir=/var/www/laravel
+	docker-compose exec php-fpm composer $(_) --working-dir=/var/www/laravel
+
+container:
+	docker-compose exec php-fpm $(_)
