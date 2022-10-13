@@ -3,9 +3,8 @@
 <head>
     
     <title>Master page</title>
-    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">-->
     @livewireStyles
-    @vite(['resources/css/app.scss', 'node_modules/font-awesome/scss/font-awesome.scss'])
+    @vite(['resources/css/app.scss'])
 </head>
 
 <body>
