@@ -6,6 +6,10 @@
   
   <div class="content category-wrap">
     
+    <div class="flex single-button">
+        <a href="#0" class="bttn button-59">More</a>
+    </div>
+
     <div class="card card-blue-light category">
       <h3>Title</h3>
       <p>Text</p>
