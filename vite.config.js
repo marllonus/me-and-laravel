@@ -7,7 +7,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.scss', 
                 'resources/js/app.js',
-                'node_modules/font-awesome/scss/font-awesome.scss'
+                //'node_modules/font-awesome/scss/font-awesome.scss'
             ],
             refresh: true,
         }),
