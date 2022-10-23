@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\CollectionSets;
+use App\Http\Livewire\KnowledgeCollections;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +18,5 @@ use App\Http\Livewire\CollectionSets;
     return view('welcome');
 });*/
 
-Route::get('/', CollectionSets::class);
+//Route::get('/', CollectionSets::class);
+Route::get('/', KnowledgeCollections::class);
