@@ -1,1 +1,30 @@
+* {
+    margin: 0;
+    font-weight: normal;
+    font-size: 1rem;
+}
 
+.knowledge-collection {
+    
+    padding: 1rem;
+
+    &__set {
+        padding: 1rem;
+    }
+
+    &__card {
+        border: thin solid;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    &__header {
+        
+    }
+
+    &__container {
+        padding: 0.5rem;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
