@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\CollectionsPage;
 
 use Livewire\Component;
+use App\Models\KnowledgeSet;
 
 class CollectionList extends Component
 {
@@ -10,12 +11,12 @@ class CollectionList extends Component
 
     public function mount()
     {
-        $this->sets = [];
+        $this->sets = KnowledgeSet::all();
     }
 
     public function addSet()
     {
-       $this->sets[] = (object)[]; 
+       $this->sets->push(new KnowledgeSet);
     }
 
     public function render()

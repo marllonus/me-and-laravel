@@ -2,15 +2,17 @@
 
 namespace App\Http\Livewire\CollectionsPage;
 
+
 use Livewire\Component;
+use App\Models\KnowledgeSet;
 
 class CollectionSet extends Component
 {
-    public $collections = [];
+    public KnowledgeSet $set;
 
-    public function mount()
+    public function mount(?KnowledgeSet $set = null)
     {
-
+        $this->set = $set ?? new KnowledgeSet;
     }
 
     public function render()
