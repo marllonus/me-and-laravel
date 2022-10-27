@@ -9,10 +9,19 @@ use App\Models\KnowledgeSet;
 class CollectionSet extends Component
 {
     public KnowledgeSet $set;
+    
+    protected $rules = [
+        'set.title' => 'required|string',
+    ];
 
-    public function mount(?KnowledgeSet $set = null)
+    public function store()
     {
-        $this->set = $set ?? new KnowledgeSet;
+        $this->set->save();
+    }
+
+    public function remove($key)
+    {
+        $this->emit('removeSet', $key);
     }
 
     public function render()

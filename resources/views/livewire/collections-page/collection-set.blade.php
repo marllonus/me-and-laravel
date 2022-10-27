@@ -16,6 +16,7 @@
         </div>
     @else
         <input type="text" wire:model="set.title">
-        <button>save</button>
+        <button wire:click="store">save</button>
+        <button wire:click="remove">remove</button>
     @endif
 </div>
