@@ -11,6 +11,7 @@ class KnowledgeSet extends Model
     
     public $timestamps = false;
 
+    protected $connection = 'mysql';
     protected $guarded = ['id'];
     protected $fillable = [
         'title',
