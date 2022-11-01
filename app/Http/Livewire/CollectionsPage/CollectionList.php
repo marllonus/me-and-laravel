@@ -36,6 +36,11 @@ class CollectionList extends Component
         $this->sets->get($index)->save();//TODO this is stupid: need split on  components
     }
 
+    public function addCollection($index)
+    {
+        dd($index);
+    }
+
     public function render()
     {
         return view('livewire.collections-page.collection-list');

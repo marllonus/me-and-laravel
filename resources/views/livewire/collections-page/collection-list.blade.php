@@ -9,7 +9,7 @@
     
             <h1 class="knowledge-collection__header">{{$set->title}}</h1>
 
-            <button wire:click="addCollection">add collection</button>
+            <button wire:click="addCollection({{$key}})">add collection</button>
 
             <div class="knowledge-collection__container">
             @if(false)
