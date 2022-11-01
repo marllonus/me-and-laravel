@@ -9,12 +9,9 @@ class CollectionList extends Component
 {
     public $sets;
 
-    public function rules()
-    {
-        return  [
-            'sets.*.title' => 'nullable|string',
-        ];
-    }
+    protected $rules = [
+        'sets.*.title' => 'required|string',
+    ];
 
     public function mount()
     {
@@ -23,12 +20,20 @@ class CollectionList extends Component
 
     public function addSet()
     {
-        $this->sets->push(new KnowledgeSet(['title' => 'new one']));
+        $this->sets->push(KnowledgeSet::make());
     }
 
-    public function removeSet($key)
+    public function remove($index)
     {
-        dd($key);
+        $this->sets->forget($index);//TODO it's not working properly into nested components
+        //may be  becouse of caching?
+        //in my  case  with  nested components data in input field all new models become empty when I interact with  collection
+    }
+
+    public function store($index)
+    {
+        $this->validate();//TODO I don't know how to validate one array item...
+        $this->sets->get($index)->save();//TODO this is stupid: need split on  components
     }
 
     public function render()
