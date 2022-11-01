@@ -20,6 +20,7 @@
             </div>
         @else
             <input type="text" wire:model="sets.{{$key}}.title">
+            @error("sets.$key.title") fill it please @enderror
             <button wire:click="store({{$key}})">save</button>
             <button wire:click="remove({{$key}})">remove</button>
         @endif
