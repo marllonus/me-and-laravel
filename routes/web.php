@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\CollectionsPage\CollectionList;
+use App\Http\Livewire\SetBlock\SetList;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +14,4 @@ use App\Http\Livewire\CollectionsPage\CollectionList;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
-//Route::get('/', CollectionSets::class);
-Route::get('/', CollectionList::class);
+Route::get('/', SetList::class);
