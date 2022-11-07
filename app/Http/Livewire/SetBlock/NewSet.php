@@ -28,7 +28,7 @@ class NewSet extends Component
     {
         $this->validate();
         $this->set->save();
-        //TODO emit?
+        $this->emit('setStored', $this->set->id);
         $this->set = null;
     }
 
