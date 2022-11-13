@@ -12,6 +12,7 @@ class SetList extends Component
 
     protected $listeners = [
         'setStored' => 'addSet',
+        'deleteSetItem' => 'deleteSet',
     ];
 
     public function mount()
@@ -27,5 +28,11 @@ class SetList extends Component
     public function addSet(KnowledgeSet $set)
     {
         $this->sets->push($set);
-    } 
+    }
+
+    public function deleteSet(int $set_id)
+    {
+        $key = $this->sets->search(fn($it)=>$it->id === $set_id);
+        $this->sets->pull($key)->delete();
+    }
 }
